@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 30" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGk-Kv-kE1">
+                                <rect key="frame" x="265" y="28" width="70" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="7Ya-R6-sNN"/>
+                                    <constraint firstAttribute="width" constant="70" id="QeY-6d-vDA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOR-2h-eTE">
+                                <rect key="frame" x="249" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="NxK-PX-TZ8"/>
+                                    <constraint firstAttribute="height" constant="100" id="Ylc-5D-soy"/>
+                                </constraints>
+                                <state key="normal" title="Tap Me"/>
+                                <connections>
+                                    <action selector="tapMeButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVi-2H-lBs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gin-1V-Muw">
+                                <rect key="frame" x="0.0" y="462" width="600" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="xUi-Dw-jO6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gin-1V-Muw" firstAttribute="centerX" secondItem="IGk-Kv-kE1" secondAttribute="centerX" id="90K-ii-Xdg"/>
+                            <constraint firstItem="gin-1V-Muw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C3d-c6-UhS"/>
+                            <constraint firstItem="qOR-2h-eTE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="249" id="Lz3-s3-9cE"/>
+                            <constraint firstItem="IGk-Kv-kE1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="P1I-S7-OfG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gin-1V-Muw" secondAttribute="bottom" constant="8" symbolic="YES" id="QD3-d5-non"/>
+                            <constraint firstAttribute="trailing" secondItem="gin-1V-Muw" secondAttribute="trailing" id="m0B-nS-kpI"/>
+                            <constraint firstItem="qOR-2h-eTE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nW8-hT-VnO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="gin-1V-Muw" id="6hm-9i-jzv"/>
+                        <outlet property="tapMeButton" destination="qOR-2h-eTE" id="yLS-qh-aQk"/>
+                        <outlet property="timeLabel" destination="IGk-Kv-kE1" id="1AR-C4-lBM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="312"/>
+        </scene>
+    </scenes>
+</document>
